@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="utf-8">
+	<meta name="keywords" content="  " />
+	<meta name="description" content="  " />
+
+	<title></title>
+
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+	<link rel="stylesheet" type="text/css" href="animate.css">
+	<style>
+	/*select，请无视这块样式*/
+	select{text-align: center;}
+	p{width:160px;display: inline-block;font-size: 14px;}
+	#loadingSlt,#aniSltC,#aniSltT,#aniSltF,#aniSltD,#aniSltTimes,#aniSltO,a{width: 240px;height:40px;margin-bottom: 15px; position: relative;display:inline-block;font-size: 14px;text-align: center;color: #1ABC9C;border:solid 1px #1ABC9C;}
+	#aniSltC .n{font-size: 20px;color: #E74C3C;}
+	a{line-height: 40px;text-decoration: none;}
+	</style>
+	<script src="http://libs.baidu.com/jquery/1.8.3/jquery.js"></script>
+</head>
+<body>
+
+<script >
+//延迟时间
+// for(var i = 1;i<=150;i++){
+// 	var t = (i/10).toFixed(1);
+// 	if(i<10){
+// 		i = "0" + i;
+// 	}
+// 	document.write('.delay'+i+'{animation-delay: '+t+'s;-webkit-animation-delay: '+t+'s;-moz-animation-delay: '+t+'s;-o-animation-delay: '+t+'s;}<br/>')
+// }
+//动画时间
+// for(var i = 1;i<=150;i++){
+// 	var t = (i/10).toFixed(1);
+// 	if(i<10){
+// 		i = "0" + i;
+// 	}
+// 	document.write('.duration'+i+'{animation-duration : '+t+'s;-webkit-animation-duration : '+t+'s;-moz-animation-duration : '+t+'s;-o-animation-duration : '+t+'s;}<br/>')
+// }
+//循环次数
+// for(var i = 1;i<=10;i++){
+// 	if(i<10){
+// 		var n = "0" + i;
+// 	}else{
+// 		n = i;
+// 	}
+// 	document.write('.aniTimes'+n+'{animation-iteration-count : '+i+';-webkit-animation-iteration-count : '+i+';-moz-animation-iteration-count : '+i+';-o-animation-iteration-count : '+i+';}<br/>')
+// }
+
+//动画库抛出
+// var name = "fadeOutRightB"
+// document.write('.protrend-'+name+'{animation: '+name+';-moz-animation: '+name+';-webkit-animation: '+name+';-o-animation: '+name+';}<br/>');
+// for(var i = 0;i<4;i++){
+// 	if(i==0){
+// 		var str = '';
+// 	}else if(i==1){
+// 		var str = '-moz-';
+// 	}else if(i==2){
+// 		var str = '-webkit-';
+// 	}else if(i==3){
+// 		var str = '-o-';
+// 	}
+// 	document.write('@'+str+'keyframes '+name+' {');
+// 	document.write('0% {opacity:1;'+str+'transform:translate3d(0%,0%,0);}<br/>');
+// 	document.write('100% {opacity:0;'+str+'transform:translate3d(300%,0%,0);}<br/>');
+// 	document.write('}');
+// }
+
+</script>
+
+
+
+
+<div id="spinner1" class="loading spinner">
+  <div class="spinner-container container1">
+    <div class="circle1"></div>
+    <div class="circle2"></div>
+    <div class="circle3"></div>
+    <div class="circle4"></div>
+  </div>
+  <div class="spinner-container container2">
+    <div class="circle1"></div>
+    <div class="circle2"></div>
+    <div class="circle3"></div>
+    <div class="circle4"></div>
+  </div>
+  <div class="spinner-container container3">
+    <div class="circle1"></div>
+    <div class="circle2"></div>
+    <div class="circle3"></div>
+    <div class="circle4"></div>
+  </div>
+</div>
+
+<div id="spinner2" class="loading spinner2"></div>
+
+<div id="spinner3" class="loading spinner3">
+  <div class="rect1"></div>
+  <div class="rect2"></div>
+  <div class="rect3"></div>
+  <div class="rect4"></div>
+  <div class="rect5"></div>
+</div>
+
+<div id="spinner4" class="loading spinner4"></div>
+
+<div style="height:100px;">
+	<h1 style="display:block;width:100px;margin:0 auto;" class="protrend-fadeOutRightB aniFunLinear duration15">1231331</h1>
+</div>
+
+<p>动画效果</p>
+<select id="aniSltC">
+	<option class="n">-----其他系列----</option>
+	<option>pulse</option>	
+	<option>rubberBand</option>	
+	<option>shake</option>	
+	<option>swing</option>	
+	<option>wobble</option>	
+	<option>rollIn</option>	
+	<option>rollOut</option>	
+	<option>lightSpeedInLeft</option>	
+	<option>lightSpeedInRight</option>
+	<option>lightSpeedOutLeft</option>
+	<option>lightSpeedOutRight</option>
+	<option class="n">-----淡入淡出系列----</option>
+	<option>fadeIn</option>	
+	<option>fadeOut</option>	
+	<option>fadeInDown</option>	
+	<option>fadeInDownB</option>	
+	<option>fadeInUp</option>	
+	<option>fadeInUpB</option>	
+	<option>fadeInLeft</option>	
+	<option>fadeInLeftB</option>	
+	<option>fadeInRight</option>	
+	<option>fadeInRightB</option>	
+	<option>fadeOutDown</option>	
+	<option>fadeOutDownB</option>	
+	<option>fadeOutUp</option>	
+	<option>fadeOutUpB</option>	
+	<option>fadeOutLeft</option>	
+	<option>fadeOutLeftB</option>	
+	<option>fadeOutRight</option>	
+	<option>fadeOutRightB</option>	
+	<option class="n">-----放大缩小系列----</option>
+	<option>zoomIn</option>	
+	<option>zoomInDown</option>	
+	<option>zoomInLeft</option>	
+	<option>zoomInRight</option>	
+	<option>zoomInUp</option>	
+	<option>zoomOut</option>	
+	<option>zoomOutDown</option>	
+	<option>zoomOutLeft</option>	
+	<option>zoomOutRight</option>	
+	<option>zoomOutUp</option>	
+	<option class="n">-----翻转系列----</option>
+	<option>flip</option>	
+	<option>flipInX</option>	
+	<option>flipInY</option>	
+	<option>flipOutX</option>	
+	<option>flipOutY</option>	
+	<option class="n">-----滑动系列----</option>
+	<option>slideInUp</option>	
+	<option>slideInUpFade</option>	
+	<option>slideInDown</option>	
+	<option>slideInDownFade</option>	
+	<option>slideInLeft</option>	
+	<option>slideInLeftFade</option>	
+	<option>slideInRight</option>	
+	<option>slideInRightFade</option>	
+	<option>slideOutUp</option>	
+	<option>slideOutDown</option>	
+	<option>slideOutLeft</option>	
+	<option>slideOutRight</option>	
+	<option class="n">-----角度翻转系列----</option>
+	<option>rotateIn</option>	
+	<option>rotateInDownLeft</option>	
+	<option>rotateInDownRight</option>	
+	<option>rotateInUpLeft</option>	
+	<option>rotateInUpRight</option>	
+	<option class="n">-----pull系列----</option>
+	<option>pullDown</option>	
+	<option>pullUp</option>	
+	<option>stretchLeft</option>	
+	<option>stretchRight</option>		
+	<option class="n">-----弹跳系列----</option>
+	<option>bounce</option>	
+	<option>bounceIn</option>	
+	<option>bounceInDown</option>	
+	<option>bounceInUp</option>	
+	<option>bounceInLeft</option>	
+	<option>bounceInRight</option>	
+	<option>bounceOutDown</option>	
+	<option>bounceOutUp</option>	
+	<option>bounceOutRight</option>	
+	<option>bounceOutLeft</option>	
+</select><br/>
+
+<p>动画执行时间</p>
+<select id="aniSltT">
+	<script type="text/javascript">
+		//动画时间
+		for(var i = 1;i<=150;i++){
+			if(i<10){
+				i = "0" + i;
+			}
+			document.write('<option>duration'+i+'</option>')
+		}
+	</script>
+</select><br/>
+
+
+<p>动画执行方式</p>
+<select id="aniSltF">
+	<option>aniFunLinear</option>	
+	<option>aniFunEase</option>	
+	<option>aniFunEaseIn</option>	
+	<option>aniFunEaseOut</option>	
+	<option>aniFunEaseInOut</option>
+</select><br/>
+
+<p>动画效果延迟时间</p>
+<select id="aniSltD">
+	<option>delay00</option>
+	<script type="text/javascript">
+		//动画时间
+		for(var i = 1;i<=150;i++){
+			if(i<10){
+				i = "0" + i;
+			}
+			document.write('<option>delay'+i+'</option>')
+		}
+	</script>
+</select><br/>
+
+<p>动画播放次数</p>
+<select id="aniSltTimes">
+	<option>aniTimes01</option>
+	<option>aniTimes02</option>
+	<option>aniTimes03</option>
+	<option>aniTimes04</option>
+	<option>aniTimes05</option>
+	<option>aniTimes06</option>
+	<option>aniTimes07</option>
+	<option>aniTimes08</option>
+	<option>aniTimes09</option>
+	<option>aniTimes10</option>
+	<option>aniTimesInfinite</option>
+</select><br/>
+
+
+<p>动画播放完毕后的状态</p>
+<select id="aniSltO">
+	<option>aniModsNone</option>
+	<option>aniModsForwards</option>
+	<option>aniModsBackwards</option>
+	<option>aniModsBoth</option>
+</select><br/>
+
+<p>请点击按钮</p>
+<a href="javascript:;" id="aniBtn">执行动画</a><br/>
+
+<p>loading动画选择</p>
+<select id="loadingSlt">
+	<option>选择loading动画效果</option>	
+	<option f="spinner1">loading加载动画1</option>
+	<option f="spinner2">loading加载动画2</option>
+	<option f="spinner3">loading加载动画3</option>
+	<option f="spinner4">loading加载动画4</option>
+</select><br/>
+
+
+<script type="text/javascript">
+	$("#loadingSlt").change(function(){
+		var f = $("#loadingSlt option:selected").attr("f");
+		$("#"+f).css("display","block").siblings(".loading").css("display","none");
+	});
+
+	function ani(){
+		var c1 = $("#aniSltC option:selected").text();
+		if($("#aniSltC option:selected").hasClass("n")){
+			alert("请选择动画效果");
+			return false;
+		}
+
+		var c2 = $("#aniSltT option:selected").text();
+		var c3 = $("#aniSltF option:selected").text();
+		var c4 = $("#aniSltD option:selected").text();
+		var c5 = $("#aniSltTimes option:selected").text();
+		var c6 = $("#aniSltO option:selected").text();
+		$("h1").attr("class","protrend-"+c1+" " + c2 +" "+c3+" "+c4+" "+c5+" "+c6);
+		$("h1").css("display","none");
+		setTimeout(function(){
+			$("h1").css("display","block");
+		},10);
+		
+	}
+
+	$("#aniBtn").click(function(){
+		ani();
+	});
+
+</script>
+
+</body>
+</html>
